@@ -1,7 +1,7 @@
-import "@/once-ui/styles/index.scss";
-import "@/once-ui/tokens/index.scss";
+import "@/ui/styles/index.scss";
+import "@/ui/tokens/index.scss";
 
-import { Flex } from '@/once-ui/components'
+import { Flex } from '@/ui/components'
 import classNames from 'classnames';
 import { Inter } from 'next/font/google'
 import { Source_Code_Pro } from 'next/font/google';
@@ -18,7 +18,7 @@ type FontConfig = {
 
 /*
 	Replace with code for secondary and tertiary fonts
-	from https://once-ui.com/customize
+	from https://ui.com/customize
 */
 const secondary: FontConfig | undefined = undefined;
 const tertiary: FontConfig | undefined = undefined;
@@ -40,7 +40,7 @@ export default function RootLayout({
 		<Flex
 			as="html" lang="en"
 			fillHeight background="page"
-			data-neutral="gray" data-brand="blue" data-accent="violet"
+			data-neutral="gray" data-brand="indigo" data-accent="indigo"
 			data-solid="color" data-solid-style="flat"
 			data-theme="dark"
 			data-border="playful"

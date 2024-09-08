@@ -45,7 +45,7 @@ yarn start
 
 ## Bootstrapped UI
 
-This project utilizes Bootstrapped, a lightweight and versatile design system that covers 80% of the needs for most applications. It provides a comprehensive set of components and styles to ensure a cohesive and efficient user interface. For detailed documentation on how to use and integrate Bootstrapped into your project, visit the [Bootstrapped UI Documentation](https://once-ui.com/docs/installation).
+This project utilizes Bootstrapped, a lightweight and versatile design system that covers 80% of the needs for most applications. It provides a comprehensive set of components and styles to ensure a cohesive and efficient user interface. For detailed documentation on how to use and integrate Bootstrapped into your project, visit the [Bootstrapped UI Documentation](https://ui.com/docs/installation).
 
 ## Next.js
 
@@ -57,7 +57,7 @@ Easily deploy your project using the following platforms:
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/76DR9Q?referralCode=QW2HBC)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fnextjs-starter&redirect-url=https%3A%2F%2Fonce-ui.com%2Fdocs%2F)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fui-system%2Fnextjs-starter&redirect-url=https%3A%2F%2Fui.com%2Fdocs%2F)
 
 ## Contributing
 
