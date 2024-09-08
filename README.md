@@ -1,48 +1,74 @@
-# **Once UI for Next.js**
+# BARK Protocol - Web UI
 
-<span style="font-size: 22px;">Once UI is a lightweight, versatile design system intended to cover 80% of the needs of all applications.
-<br>
+Welcome to the BARK Protocol - DeFi Solutions repository! BARK Protocol is revolutionizing decentralized finance (DeFi) with intent-based protocols and agentic markets. This project includes innovative solutions such as the BARK Protocol, MEV Agents, and BarkSwap, designed to enhance efficiency, fairness, and engagement in digital asset transactions.
 
-![Once UI](public/images/cover.png)
+![BARK Protocol UI](public/images/cover.png)
 
-<span style="font-size: 18px;">Start building your Next.js app in minutes with:</span> 
-* **A robust token and style system** that simplifies customization and ensures consistency. 
-* **A copy-and-paste component library** that integrates seamlessly into your project.
-* **Interactive documentation** to apply your branding and set component properties.
-<br><br>
+## Features
 
-# **Documentation**
-The documentation is available at [once-ui.com/docs](https://once-ui.com/docs).
-<br><br>
+- **BARK Protocol:** An on-chain agnostic order book for competitive batch processing, optimizing surplus and efficiency with strategies for fairness and meritocracy.
+- **MEV Agents:** Open-source algorithms for deploying private strategies and engaging in MEV activities. Includes advanced strategies and AI-driven agents.
+- **BarkSwap:** An interface and SDK for seamless submission of order intents to the BARK Protocol.
+- **Bark Arena:** A real-time visual platform for order flow auctions and peer-to-peer matches, designed to engage MEV agents and their communities.
 
-# **Authors**
-Connect with us on X or LinkedIn.
+## Installation
 
-Lorant Toth: [X](https://x.com/lorant_one), [LinkedIn](https://www.linkedin.com/in/lorant-one/)  
-Zsofia Komaromi: [X](https://x.com/zsofiakomaromi), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
-<br><br>
+To get started with the BARK Protocol project, follow these steps:
 
-# **Get involved**
-- Join the [Once UI Discord server](https://discord.com/invite/5EyAQ4eNdS) to connect with designers, developers and share your projects.
-- Report a [bug](https://github.com/once-ui-system/nextjs-starter/issues/new?labels=bug&template=bug_report.md).
-- Submit a [feature request](https://github.com/once-ui-system/nextjs-starter/issues/new?labels=feature%20request&template=feature_request.md).
-<br><br>
+### Prerequisites
 
-# **License**
+- Node.js (v18 or later)
+- pnpm or yarn
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-<br><br>
+### Clone the Repository
 
-# **Once UI for Figma**
+```bash
+git clone https://github.com/barkprotol/bark-defi-solutions.git
+cd bark-defi-solutions
+```
 
-Once UI is also available for Figma.  
-Design and prototype entire products from scratch in hours. Use the same tokens and components as the Next.js design system.
+### Install Dependencies
 
-Grab a copy from the [Figma Community](https://figma.com/).
-<br><br>
+```bash
+pnpm install
+# or
+yarn install
+```
 
-# **Deploy your project**
+### Run the Application
+
+```bash
+pnpm start
+# or
+yarn start
+```
+
+## Bootstrapped UI
+
+This project utilizes Bootstrapped, a lightweight and versatile design system that covers 80% of the needs for most applications. It provides a comprehensive set of components and styles to ensure a cohesive and efficient user interface. For detailed documentation on how to use and integrate Bootstrapped into your project, visit the [Bootstrapped UI Documentation](https://once-ui.com/docs/installation).
+
+## Next.js
+
+The BARK Protocol project is built using Next.js, a powerful React framework for server-side rendering and static site generation. Next.js enables optimal performance and scalability for your web application, enhancing the overall user experience.
+
+## Deploy Your Project
+
+Easily deploy your project using the following platforms:
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/76DR9Q?referralCode=QW2HBC)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fnextjs-starter&redirect-url=https%3A%2F%2Fonce-ui.com%2Fdocs%2F)
+
+## Contributing
+
+We welcome contributions to the BARK Protocol project! Please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
