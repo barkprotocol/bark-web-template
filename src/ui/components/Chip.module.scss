@@ -12,7 +12,7 @@
 
         &:hover,
         &:focus {
-            background: var(--brand-alpha-medium);
+            background: var(--brand-alpha-dark); // Consider a slightly darker shade for better feedback
         }
 
         &:active {
@@ -38,6 +38,8 @@
 
     &:disabled {
         background: var(--neutral-solid-weak);
+        color: var(--neutral-on-background-disabled); // Ensure color contrast for readability
         cursor: not-allowed;
+        opacity: 0.6; // Reduce opacity to indicate disabled state
     }
 }

@@ -1,4 +1,7 @@
-/* BOX-SIZING */
+/****************************/
+/*       BOX-SIZING         */
+/****************************/
+
 * {
     box-sizing: border-box;
 }
@@ -24,13 +27,19 @@ img {
     user-select: none;
 }
 
-/* SELECTION */
+/****************************/
+/*        SELECTION         */
+/****************************/
+
 ::selection {
     background: var(--neutral-on-background-medium);
     color: var(--neutral-background-strong);
 }
 
-/* LINK */
+/****************************/
+/*          LINK           */
+/****************************/
+
 a {
     color: var(--brand-on-background-medium);
     text-decoration: none;
@@ -43,7 +52,10 @@ a {
     }
 }
 
-/* SCROLLBAR */
+/****************************/
+/*        SCROLLBAR         */
+/****************************/
+
 ::-webkit-scrollbar {
     background: var(--static-transparent);
     width: var(--static-space-8);

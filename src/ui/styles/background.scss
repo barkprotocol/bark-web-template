@@ -1,5 +1,5 @@
-  /****************************/
- /*     BACKGROUND-COLOR     */
+/****************************/
+/*     BACKGROUND-COLOR     */
 /****************************/
 
 /* PAGE */
@@ -16,6 +16,24 @@
     background-color: var(--backdrop);
 }
 
+/* Define selection colors in variables for ease of maintenance */
+:root {
+    --selection-background-neutral: var(--neutral-on-background-weak);
+    --selection-color-neutral: var(--neutral-background-weak);
+    --selection-background-brand: var(--brand-on-background-weak);
+    --selection-color-brand: var(--brand-background-weak);
+    --selection-background-accent: var(--accent-on-background-weak);
+    --selection-color-accent: var(--accent-background-weak);
+    --selection-background-info: var(--info-on-background-weak);
+    --selection-color-info: var(--info-background-weak);
+    --selection-background-danger: var(--danger-on-background-weak);
+    --selection-color-danger: var(--danger-background-weak);
+    --selection-background-warning: var(--warning-on-background-weak);
+    --selection-color-warning: var(--warning-background-weak);
+    --selection-background-success: var(--success-on-background-weak);
+    --selection-color-success: var(--success-background-weak);
+}
+
 /* NEUTRAL */
 .neutral-background-weak,
 .neutral-background-medium,
@@ -24,8 +42,8 @@
 .neutral-alpha-medium,
 .neutral-alpha-strong {
     ::selection {
-        background-color: var(--neutral-on-background-weak);
-        color: var(--neutral-background-weak);
+        background-color: var(--selection-background-neutral);
+        color: var(--selection-color-neutral);
     }
 }
 
@@ -33,8 +51,8 @@
 .neutral-solid-medium,
 .neutral-solid-strong {
     ::selection {
-        background-color: var(--neutral-background-weak);
-        color: var(--neutral-on-background-medium);
+        background-color: var(--selection-background-neutral);
+        color: var(--selection-color-neutral);
     }
 }
 
@@ -82,8 +100,8 @@
 .brand-alpha-medium,
 .brand-alpha-strong {
     ::selection {
-        background-color: var(--brand-on-background-weak);
-        color: var(--brand-background-weak);
+        background-color: var(--selection-background-brand);
+        color: var(--selection-color-brand);
     }
 }
 
@@ -91,8 +109,8 @@
 .brand-solid-medium,
 .brand-solid-strong {
     ::selection {
-        background-color: var(--brand-background-weak);
-        color: var(--brand-on-background-medium);
+        background-color: var(--selection-background-brand);
+        color: var(--selection-color-brand);
     }
 }
 
@@ -140,8 +158,8 @@
 .accent-alpha-medium,
 .accent-alpha-strong {
     ::selection {
-        background-color: var(--accent-on-background-weak);
-        color: var(--accent-background-weak);
+        background-color: var(--selection-background-accent);
+        color: var(--selection-color-accent);
     }
 }
 
@@ -149,8 +167,8 @@
 .accent-solid-medium,
 .accent-solid-strong {
     ::selection {
-        background-color: var(--accent-background-weak);
-        color: var(--accent-on-background-medium);
+        background-color: var(--selection-background-accent);
+        color: var(--selection-color-accent);
     }
 }
 
@@ -198,8 +216,8 @@
 .info-alpha-medium,
 .info-alpha-strong {
     ::selection {
-        background-color: var(--info-on-background-weak);
-        color: var(--info-background-weak);
+        background-color: var(--selection-background-info);
+        color: var(--selection-color-info);
     }
 }
 
@@ -207,8 +225,8 @@
 .info-solid-medium,
 .info-solid-strong {
     ::selection {
-        background-color: var(--info-background-weak);
-        color: var(--info-on-background-medium);
+        background-color: var(--selection-background-info);
+        color: var(--selection-color-info);
     }
 }
 
@@ -256,8 +274,8 @@
 .danger-alpha-medium,
 .danger-alpha-strong {
     ::selection {
-        background-color: var(--danger-on-background-weak);
-        color: var(--danger-background-weak);
+        background-color: var(--selection-background-danger);
+        color: var(--selection-color-danger);
     }
 }
 
@@ -265,8 +283,8 @@
 .danger-solid-medium,
 .danger-solid-strong {
     ::selection {
-        background-color: var(--danger-background-weak);
-        color: var(--danger-on-background-medium);
+        background-color: var(--selection-background-danger);
+        color: var(--selection-color-danger);
     }
 }
 
@@ -314,8 +332,8 @@
 .warning-alpha-medium,
 .warning-alpha-strong {
     ::selection {
-        background-color: var(--warning-on-background-weak);
-        color: var(--warning-background-weak);
+        background-color: var(--selection-background-warning);
+        color: var(--selection-color-warning);
     }
 }
 
@@ -323,8 +341,8 @@
 .warning-solid-medium,
 .warning-solid-strong {
     ::selection {
-        background-color: var(--warning-background-weak);
-        color: var(--warning-on-background-medium);
+        background-color: var(--selection-background-warning);
+        color: var(--selection-color-warning);
     }
 }
 
@@ -372,8 +390,8 @@
 .success-alpha-medium,
 .success-alpha-strong {
     ::selection {
-        background-color: var(--success-on-background-weak);
-        color: var(--success-background-weak);
+        background-color: var(--selection-background-success);
+        color: var(--selection-color-success);
     }
 }
 
@@ -381,8 +399,8 @@
 .success-solid-medium,
 .success-solid-strong {
     ::selection {
-        background-color: var(--success-background-weak);
-        color: var(--success-on-background-medium);
+        background-color: var(--selection-background-success);
+        color: var(--selection-color-success);
     }
 }
 

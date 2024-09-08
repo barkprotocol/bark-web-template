@@ -57,7 +57,7 @@ export default function Home() {
                   padding: 'var(--static-space-8) var(--static-space-16)',
                   backdropFilter: 'blur(var(--static-space-1))'
                 }}>
-                Start by editing <span className="brand-on-background-medium">app/page.tsx</span>
+                Powered by <span className="brand-on-background-medium">Solana</span>
               </InlineCode>
               <Heading
                 wrap="balance"
@@ -69,7 +69,7 @@ export default function Home() {
                 </span>
               </Heading>
               <Button
-                href="https://ui.com/docs"
+                href="https://docs.barkprotocol.net"
                 suffixIcon="chevronRight"
                 variant="secondary">
                 Read Documentation

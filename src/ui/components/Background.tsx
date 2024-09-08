@@ -7,7 +7,7 @@ interface BackgroundProps {
     gradient?: boolean;
     dots?: boolean;
     lines?: boolean;
-    shootingStars?: boolean; // New prop for shooting stars
+    shootingStars?: boolean;
     className?: string;
     style?: React.CSSProperties;
 }
@@ -17,7 +17,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(({
     gradient = true,
     dots = true,
     lines = true,
-    shootingStars = false, // Default is false
+    shootingStars = false,
     className,
     style
 }, ref) => {
@@ -28,17 +28,15 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(({
             const interval = setInterval(() => {
                 const newStar = {
                     id: Math.random(),
-                    top: `${Math.random() * 100}%`, // Random vertical position
-                    left: `${Math.random() * 100}%`, // Random horizontal position
+                    top: `${Math.random() * 100}%`,
+                    left: `${Math.random() * 100}%`,
                 };
                 setStars((prevStars) => [...prevStars, newStar]);
 
-                // Remove the star after a certain time to simulate the end of its trail
                 setTimeout(() => {
                     setStars((prevStars) => prevStars.filter((star) => star.id !== newStar.id));
-                }, 5000); // Star lasts 1.5 seconds
-
-            }, Math.random() * 5000 + 5000); // Interval between 5-10 seconds
+                }, 5000); // Adjust as needed
+            }, Math.random() * 5000 + 5000); // Adjust as needed
 
             return () => clearInterval(interval);
         }
@@ -51,7 +49,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(({
                     ref={ref}
                     className={className}
                     style={{
-                        position: position,
+                        position,
                         top: '0',
                         left: '0',
                         zIndex: '0',
@@ -68,7 +66,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(({
                     ref={ref}
                     className={className}
                     style={{
-                        position: position,
+                        position,
                         zIndex: '0',
                         top: '0',
                         left: '0',
@@ -86,7 +84,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(({
                     ref={ref}
                     className={className}
                     style={{
-                        position: position,
+                        position,
                         zIndex: '0',
                         top: '0',
                         left: '0',
@@ -103,48 +101,48 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(({
                 </div>
             )}
             {shootingStars && stars.map((star) => (
-            <div
-                key={star.id}
-                className={className}
-                style={{
-                    position: 'absolute',
-                    top: star.top,
-                    left: star.left,
-                    width: '1px',
-                    height: '1px',
-                    background: 'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))', // Horizontal gradient for trail
-                    animation: 'shooting-star 5s ease-out forwards',
-                    perspective: '1000px', // Set perspective to simulate depth
-                    ...style,
-                }}
-            />
-        ))}
-        <style jsx>{`
-            @keyframes shooting-star {
-                0% {
-                    width: 1px; // Start small
-                    opacity: 0;
-                    transform: translateZ(-1000px) scale(0.1) rotateY(45deg); // Start far away, small and rotated
-                    transform-origin: left center;
+                <div
+                    key={star.id}
+                    className={className}
+                    style={{
+                        position: 'absolute',
+                        top: star.top,
+                        left: star.left,
+                        width: '1px',
+                        height: '1px',
+                        background: 'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
+                        animation: 'shooting-star 5s ease-out forwards',
+                        perspective: '1000px',
+                        ...style,
+                    }}
+                />
+            ))}
+            <style jsx>{`
+                @keyframes shooting-star {
+                    0% {
+                        width: 1px;
+                        opacity: 0;
+                        transform: translateZ(-1000px) scale(0.1) rotateY(45deg);
+                        transform-origin: left center;
+                    }
+                    20% {
+                        width: 400px;
+                        opacity: 1;
+                        transform: translateZ(-500px) scale(0.5) rotateY(45deg);
+                    }
+                    80% {
+                        width: 400px;
+                        opacity: 1;
+                        transform: translateZ(0px) scale(1) rotateY(45deg);
+                    }
+                    100% {
+                        width: 0px;
+                        opacity: 0;
+                        transform: translateZ(300px) scale(2) rotateY(45deg);
+                        transform-origin: left center;
+                    }
                 }
-                20% {
-                    width: 400px; // Expand width for trail
-                    opacity: 1;   // Fully visible
-                    transform: translateZ(-500px) scale(0.5) rotateY(45deg); // Move closer and grow
-                }
-                80% {
-                    width: 400px;
-                    opacity: 1;   // Hold visibility
-                    transform: translateZ(0px) scale(1) rotateY(45deg); // Closest to the viewer, full size
-                }
-                100% {
-                    width: 0px;  // Shrink width as it fades
-                    opacity: 0;  // Fade out
-                    transform: translateZ(300px) scale(2) rotateY(45deg); // Move past the viewer and grow
-                    transform-origin: left center;
-                }
-            }
-        `}</style>
+            `}</style>
         </>
     );
 });

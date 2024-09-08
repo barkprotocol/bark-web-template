@@ -1,0 +1,70 @@
+// Background.module.scss
+
+:root {
+    /* Brand Colors */
+    --scheme-brand-100: #110702;
+    --scheme-brand-200: #1f130b;
+    --scheme-brand-300: #4a3d33;
+    --scheme-brand-400: #66574e;
+    --scheme-brand-500: #83746a;
+    --scheme-brand-600: #a5958a;
+    --scheme-brand-600-10: rgba(165, 149, 138, 0.1);
+    --scheme-brand-600-30: rgba(165, 149, 138, 0.3);
+    --scheme-brand-600-50: rgba(165, 149, 138, 0.5);
+    --scheme-brand-700: #c1b1a6;
+    --scheme-brand-800: #e2d0c5;
+    --scheme-brand-900: #f2e1d5;
+    --scheme-brand-1000: #fcebdf;
+    --scheme-brand-1100: #fff5e9;
+    --scheme-brand-1200: #fffbf0;
+  
+    /* Accent Colors */
+    --scheme-accent-100: #110702;
+    --scheme-accent-200: #1f130b;
+    --scheme-accent-300: #4a3d33;
+    --scheme-accent-400: #66574e;
+    --scheme-accent-500: #83746a;
+    --scheme-accent-600: #a5958a;
+    --scheme-accent-600-10: rgba(165, 149, 138, 0.1);
+    --scheme-accent-600-30: rgba(165, 149, 138, 0.3);
+    --scheme-accent-600-50: rgba(165, 149, 138, 0.5);
+    --scheme-accent-700: #c1b1a6;
+    --scheme-accent-800: #e2d0c5;
+    --scheme-accent-900: #f2e1d5;
+    --scheme-accent-1000: #fcebdf;
+    --scheme-accent-1100: #fff5e9;
+    --scheme-accent-1200: #fffbf0;
+  
+    /* Neutral Colors */
+    --scheme-neutral-100: #100703;
+    --scheme-neutral-200: #1e130d;
+    --scheme-neutral-300: #493d36;
+    --scheme-neutral-400: #655850;
+    --scheme-neutral-500: #82746c;
+    --scheme-neutral-600: #a4958d;
+    --scheme-neutral-600-10: rgba(164, 149, 141, 0.1);
+    --scheme-neutral-600-30: rgba(164, 149, 141, 0.3);
+    --scheme-neutral-600-50: rgba(164, 149, 141, 0.5);
+    --scheme-neutral-700: #c0b1a8;
+    --scheme-neutral-800: #e1d1c8;
+    --scheme-neutral-900: #eeded5;
+    --scheme-neutral-1000: #fbebe2;
+    --scheme-neutral-1100: #fff1e9;
+    --scheme-neutral-1200: #fffbf3;
+  }
+  
+  /* Example background styles */
+  .background {
+    background-color: var(--scheme-brand-100);
+  }
+  
+  .background-accent {
+    background-color: var(--scheme-accent-200);
+  }
+  
+  .background-neutral {
+    background-color: var(--scheme-neutral-300);
+  }
+  
+  /* Add more styles as needed */
+  
