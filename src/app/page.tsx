@@ -32,8 +32,8 @@ import { RainbowButton } from '@/components/ui/rainbow-button';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { label: 'Github', href: 'https://git.new/bark', icon: GitHubLogoIcon },
-  { label: 'Docs', href: 'https://docs.b', icon: BookOpenIcon },
+  { label: 'Github', href: 'https://git.new/bark-protocol', icon: GitHubLogoIcon },
+  { label: 'Docs', href: 'https://docs.barkprotocol.net', icon: BookOpenIcon },
 ];
 
 const Header = ({ handleLogin }: { handleLogin: () => void }) => {
@@ -151,7 +151,7 @@ const Hero = ({ handleLogin }: { handleLogin: () => void }) => {
           <BlurFade delay={0.3} className="pointer-events-none select-none">
             <div className="inline-flex items-center rounded-full border border-primary/20 bg-muted/80 px-4 py-1.5 shadow-lg backdrop-blur-sm">
               <span className="text-sm font-medium text-primary">
-                ✨ Introducing BARK Agent
+                ✨ Introducing BARK AI Agent
               </span>
             </div>
 
@@ -164,8 +164,7 @@ const Hero = ({ handleLogin }: { handleLogin: () => void }) => {
             </h1>
 
             <p className="mt-4 text-lg text-muted-foreground">
-              Elevate your Solana experience with AI-powered insights and
-              delegated actions
+             Transform your Solana journey with AI-driven insights and seamless delegated actions.
             </p>
           </BlurFade>
 
@@ -389,7 +388,7 @@ export default function Home() {
 
   if (isMaintenanceMode) {
     login = () => {
-      window.location.href = 'https://x.com/bark_sh';
+      window.location.href = 'https://x.com/bark_protocol';
     };
   }
 

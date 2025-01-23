@@ -4,13 +4,6 @@
 
 BARK AI is an **open-source**, full-stack application that brings together the power of LLM models and blockchain technology. Designed for the [Solana](https://solana.com/) ecosystem, BARK enables seamless interactions with DeFi protocols, NFTs, and much more.
 
-[![GitHub stars](https://img.shields.io/github/stars/BarkProjects/bark-app?style=flat-square)](https://github.com/BarkProjects/bark-app/stargazers)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://github.com/BarkProjects/bark-app/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/BarkProjects/bark-app?style=flat-square)](https://github.com/BarkProjects/bark-app/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/BarkProjects/bark-app?style=flat-square)](https://github.com/BarkProjects/bark-app/pulls)
-[![Last commit](https://img.shields.io/github/last-commit/BarkProjects/bark-app?style=flat-square)](https://github.com/BarkProjects/bark-app/commits/main)
-[![Contributors](https://img.shields.io/github/contributors/BarkProjects/bark-app?style=flat-square)](https://github.com/BarkProjects/bark-app/graphs/contributors)
-
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)

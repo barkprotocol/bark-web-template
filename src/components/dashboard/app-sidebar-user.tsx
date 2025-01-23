@@ -23,6 +23,7 @@ import {
 import { Skeleton } from '@/components/ui/skeleton';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useUser } from '@/hooks/use-user';
+import React from 'react';
 
 export const AppSidebarUser = () => {
   const { isLoading, user, logout } = useUser();

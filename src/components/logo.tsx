@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 import { DynamicImage } from './dynamic-image';
+import React from 'react';
 
 export default function Logo({
   width = 100,

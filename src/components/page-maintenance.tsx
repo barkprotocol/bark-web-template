@@ -35,11 +35,11 @@ export default function MaintenanceIndex() {
         <p className="text-lg">
           Follow{' '}
           <Link
-            href="https://x.com/bark_sh"
+            href="https://x.com/bark_protocol"
             target="_blank"
             className="text-blue-500 hover:text-blue-600"
           >
-            @bark_sh
+            @bark_protocol
           </Link>{' '}
           for updates on our launch
         </p>

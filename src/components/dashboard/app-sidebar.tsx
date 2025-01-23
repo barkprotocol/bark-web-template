@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { BookOpen, Brain, HomeIcon } from 'lucide-react';
+import { BookOpen, Bot, Brain, HomeIcon, Workflow } from 'lucide-react';
 
 import { ThemeToggle } from '@/components/theme-toggle';
 import {
@@ -23,6 +23,7 @@ import { APP_VERSION, IS_BETA } from '@/lib/constants';
 import { AppSidebarAutomations } from './app-sidebar-automations';
 import { AppSidebarConversations } from './app-sidebar-conversations';
 import { AppSidebarUser } from './app-sidebar-user';
+import React from 'react';
 
 const AppSidebarHeader = () => {
   return (
@@ -79,20 +80,20 @@ const ExploreItems = [
     icon: Brain,
     external: false,
   },
-  // {
-  //     title: "Agents",
-  //     url: "/agents",
-  //     segment: "agents",
-  //     icon: Bot,
-  //     external: false,
-  // },
-  // {
-  //     title: "Automations",
-  //     url: "/automations",
-  //     segment: "automations",
-  //     icon: Workflow,
-  //     external: false,
-  // }
+  {
+  title: "Agents",
+  url: "/agents",
+  segment: "agents",
+  icon: Bot,
+  external: false,
+  },
+  {
+  title: "Automations",
+  url: "/automations",
+  segment: "automations",
+  icon: Workflow,
+  external: false,
+  }
 ] as const;
 
 export function AppSidebar() {
