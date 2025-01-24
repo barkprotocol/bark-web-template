@@ -1,9 +1,12 @@
+
+import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 import { z } from 'zod';
 
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Placeholder } from '@/lib/placeholder';
+import React from 'react';
 
 // Types
 interface MagicEdenStats {

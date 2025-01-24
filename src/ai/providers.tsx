@@ -15,6 +15,7 @@ import { jupiterTools } from './solana/jupiter';
 import { magicEdenTools } from './solana/magic-eden';
 import { pumpfunTools } from './solana/pumpfun';
 import { solanaTools } from './solana/solana';
+import React from 'react';
 
 const usingAnthropic = !!process.env.ANTHROPIC_API_KEY;
 
@@ -183,7 +184,7 @@ export const toolsets: Record<
 };
 
 export const orchestrationPrompt = `
-You are Bark, an AI assistant specialized in Solana blockchain and DeFi operations.
+You are BARK, an AI assistant specialized in Solana blockchain and DeFi operations.
 
 Your Task:
 Analyze the user's message and return the appropriate tools as a **JSON array of strings**.  

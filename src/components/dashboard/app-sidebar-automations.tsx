@@ -49,6 +49,7 @@ import { useUser } from '@/hooks/use-user';
 import { EVENTS } from '@/lib/events';
 import { cn } from '@/lib/utils';
 import { NO_CONFIRMATION_MESSAGE } from '@/lib/constants';
+import React from 'react';
 
 interface ActionMenuItemProps {
   action: Action;

@@ -27,4 +27,9 @@ yarn-error.log*
 next-env.d.ts
 
 # Cache
-.cache 
+.cache
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*

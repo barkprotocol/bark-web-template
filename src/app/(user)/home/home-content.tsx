@@ -28,6 +28,7 @@ import { IntegrationsGrid } from './components/integrations-grid';
 import { ConversationInput } from './conversation-input';
 import { getRandomSuggestions } from './data/suggestions';
 import { SuggestionCard } from './suggestion-card';
+import React from 'react';
 
 const EAP_PRICE = 1.0;
 const RECEIVE_WALLET_ADDRESS =
@@ -75,7 +76,6 @@ export function HomeContent() {
     initialMessages: [],
     body: { id: chatId },
     onFinish: () => {
-      // Only refresh if we have a new conversation that's not in the list
       if (chatId && !conversations?.find((conv) => conv.id === chatId)) {
         refreshConversations();
       }
@@ -104,11 +104,9 @@ export function HomeContent() {
           return;
         }
 
-        // Continue verification if not reached max attempts
         if (verificationAttempts < MAX_VERIFICATION_ATTEMPTS) {
           setVerificationAttempts((prev) => prev + 1);
         } else {
-          // Max attempts reached, show manual verification message
           toast.error('Verification Timeout', {
             description:
               'Please visit the FAQ page to manually verify your transaction.',
@@ -117,7 +115,7 @@ export function HomeContent() {
         }
       } catch (error) {
         console.error('Verification error:', error);
-        // Continue verification if not reached max attempts
+
         if (verificationAttempts < MAX_VERIFICATION_ATTEMPTS) {
           setVerificationAttempts((prev) => prev + 1);
         }
@@ -129,11 +127,7 @@ export function HomeContent() {
   }, [verifyingTx, verificationAttempts]);
 
   const handleSend = async (value: string) => {
-    if (!value.trim()) return;
-
-    if (!user?.earlyAccess) {
-      return;
-    }
+    if (!value.trim() || !user?.earlyAccess) return;
 
     const fakeEvent = new Event('submit') as any;
     fakeEvent.preventDefault = () => {};
@@ -171,29 +165,8 @@ export function HomeContent() {
     } catch (error) {
       console.error('Transaction error:', error);
 
-      let errorMessage = 'Failed to send the transaction. Please try again.';
-
-      if (error instanceof Error) {
-        const errorString = error.toString();
-        if (
-          errorString.includes('TransactionExpiredBlockheightExceededError')
-        ) {
-          toast.error('Transaction Timeout', {
-            description: (
-              <>
-                <span className="font-semibold">
-                  Transaction might have been sent successfully.
-                </span>
-                <br />
-                If SOL was deducted from your wallet, please visit the FAQ page
-                and input your transaction hash for manual verification.
-              </>
-            ),
-          });
-          return;
-        }
-        errorMessage = error.message;
-      }
+      const errorMessage =
+        error instanceof Error ? error.message : 'Unknown error occurred.';
 
       toast.error('Transaction Failed', {
         description: errorMessage,
@@ -203,14 +176,12 @@ export function HomeContent() {
     }
   };
 
-  // Reset chat when pathname changes to /home
   useEffect(() => {
     if (pathname === '/home') {
       resetChat();
     }
   }, [pathname, resetChat]);
 
-  // 监听浏览器的前进后退
   useEffect(() => {
     const handlePopState = () => {
       if (location.pathname === '/home') {
@@ -290,109 +261,11 @@ export function HomeContent() {
 
   if (!hasEAP) {
     return (
-      <div className="relative h-screen w-full overflow-hidden text-xs sm:text-base">
-        <div className="absolute inset-0 z-10 bg-background/30 backdrop-blur-md" />
-        {mainContent}
-        <div className="absolute inset-0 z-20 flex items-center justify-center">
-          <div className="mx-auto max-h-screen max-w-xl overflow-y-auto p-6">
-            <Card className="relative max-h-full border-white/[0.1] bg-white/[0.02] p-4 backdrop-blur-sm backdrop-saturate-150 dark:bg-black/[0.02] sm:p-8">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/5 to-white/[0.02] dark:from-white/[0.02] dark:to-white/[0.01]" />
-              <div className="relative space-y-6">
-                <div className="space-y-2 text-center">
-                  <h2 className="text-lg font-semibold sm:text-2xl">
-                    Early Access Program
-                  </h2>
-                  <div className="text-muted-foreground">
-                    We&apos;re currently limiting <Badge>BETA</Badge> access to
-                    a limited amount of users to ensure stable service while
-                    continuing to refine features.
-                  </div>
-                </div>
-
-                <Card className="border-teal-500/10 bg-white/[0.01] p-6 backdrop-blur-sm dark:bg-black/[0.01]">
-                  <h3 className="mb-4 font-semibold">EAP Benefits</h3>
-                  <div className="space-y-3">
-                    {EAP_BENEFITS.map((benefit, index) => (
-                      <div key={index} className="flex items-start gap-2">
-                        <CheckCircle2 className="mt-1 h-4 w-4 text-teal-500" />
-                        <span className="text-xs sm:text-sm">{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
-                </Card>
-
-                <div className="rounded-lg bg-white/[0.01] p-4 backdrop-blur-sm dark:bg-black/[0.01]">
-                  <div className="mb-2 flex items-center justify-between">
-                    <span className="text:xs font-medium sm:text-sm">
-                      Payment
-                    </span>
-                    <span className="text-base font-semibold sm:text-lg">
-                      {EAP_PRICE} SOL
-                    </span>
-                  </div>
-                  <div className="text-xs text-muted-foreground sm:text-sm">
-                    Funds will be allocated to cover expenses such as LLM
-                    integration, RPC data services, infrastructure maintenance,
-                    and other operational costs, all aimed at ensuring the
-                    platform&apos;s stability and reliability.
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between gap-4">
-                  <Link
-                    href="https://x.com/bark_protocol"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-xs text-muted-foreground transition-colors hover:text-foreground sm:text-sm"
-                  >
-                    <RiTwitterXFill className="mr-2 h-4 w-4" />
-                    Follow Updates
-                  </Link>
-                  <Button
-                    onClick={handlePurchase}
-                    disabled={isProcessing}
-                    className="bg-teal-500/70 text-xs ring-offset-0 hover:bg-teal-500/90 focus-visible:ring-0 focus-visible:ring-offset-0 dark:bg-teal-500/60 dark:hover:bg-teal-500/80 sm:text-sm"
-                  >
-                    {isProcessing ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Processing
-                      </>
-                    ) : (
-                      `Join EAP (${EAP_PRICE} SOL)`
-                    )}
-                  </Button>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
+      <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center px-6">
+        {/* Non-EAP Access */}
       </div>
     );
   }
 
-  return (
-    <div className="relative h-screen">
-      {!showChat && (
-        <div
-          className={cn(
-            'absolute inset-0 overflow-y-auto overflow-x-hidden transition-opacity duration-300 ',
-            showChat ? 'pointer-events-none opacity-0' : 'opacity-100',
-          )}
-        >
-          {mainContent}
-        </div>
-      )}
-      {showChat && (
-        <div
-          className={cn(
-            'absolute inset-0 transition-opacity duration-300',
-            showChat ? 'opacity-100' : 'pointer-events-none opacity-0',
-          )}
-        >
-          <ChatInterface id={chatId} initialMessages={messages} />
-        </div>
-      )}
-    </div>
-  );
+  return mainContent;
 }

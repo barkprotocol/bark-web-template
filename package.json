@@ -20,6 +20,7 @@
   "dependencies": {
     "@ai-sdk/anthropic": "^1.1.1",
     "@ai-sdk/openai": "^1.1.1",
+    "@aws-amplify/ui-react": "^6.9.1",
     "@bonfida/spl-name-service": "^3.0.8",
     "@mem0/vercel-ai-provider": "^0.0.10",
     "@prisma/client": "^6.2.1",
@@ -48,6 +49,7 @@
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "ai": "^4.1.1",
+    "aws-sdk": "^2.1692.0",
     "axios": "^1.7.9",
     "bs58": "^6.0.0",
     "class-variance-authority": "^0.7.1",
@@ -69,6 +71,7 @@
     "react": "^19.0.0",
     "react-day-picker": "9.5.0",
     "react-dom": "^19.0.0",
+    "react-jsx": "^1.0.0",
     "react-markdown": "^9.0.3",
     "react-particles": "^2.12.2",
     "react-tweet": "^3.2.1",
@@ -82,11 +85,13 @@
     "tailwindcss-animate": "^1.0.7",
     "tsparticles-slim": "^2.12.0",
     "uuid": "^11.0.5",
+    "xdg-utils": "^0.0.3",
     "yet-another-react-lightbox": "^3.21.7",
     "zod": "^3.24.1",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
     "@eslint/eslintrc": "^3.2.0",
     "@tailwindcss/typography": "^0.5.16",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",

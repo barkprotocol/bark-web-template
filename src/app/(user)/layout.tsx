@@ -2,6 +2,7 @@ import { cookies } from 'next/headers';
 
 import { AppSidebar } from '@/components/dashboard/app-sidebar';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import React from 'react';
 
 export default async function UserLayout({
   children,

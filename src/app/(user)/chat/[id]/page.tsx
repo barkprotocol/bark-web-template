@@ -11,6 +11,7 @@ import {
 
 import ChatInterface from './chat-interface';
 import { ChatSkeleton } from './chat-skeleton';
+import React from 'react';
 
 /**
  * Generates metadata for the chat page based on conversation details

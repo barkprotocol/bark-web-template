@@ -30,6 +30,7 @@ import { IntegrationsBackground } from '@/components/ui/integrations-background'
 import Marquee from '@/components/ui/marquee';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import { cn } from '@/lib/utils';
+import React from 'react';
 
 const navItems = [
   { label: 'Github', href: 'https://git.new/bark-protocol', icon: GitHubLogoIcon },
@@ -382,7 +383,7 @@ export default function Home() {
       loginMethod,
       loginAccount,
     ) => {
-      router.push('/home');
+      return router.push('/home');
     },
   });
 
