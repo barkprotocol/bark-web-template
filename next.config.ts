@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable Turbopack
+  experimental: {
+    turbopack: true,
+  },
+
   // Custom image domains and remote patterns
   images: {
     remotePatterns: [
@@ -24,32 +29,29 @@ const nextConfig = {
 
   // Custom Webpack configuration
   webpack: (config, { isServer }) => {
-    // Add rule for handling JSON files
+    // Remove this block if you switch entirely to Turbopack
     config.module.rules.push({
       test: /\.json$/,
       type: "json",
     });
 
-    // Simplify build output to show only errors (suppress warnings)
     config.stats = "errors-only";
 
-    // Suppress specific non-blocking warnings
     config.ignoreWarnings = [
       /Failed to parse source map/,
       /Module not found/,
       /Some dependencies are not being included/,
     ];
 
-    // Prevent issues with Node.js modules in browser environments
     config.resolve.fallback = {
-      fs: false, // Prevent `fs` module resolution errors
-      module: false, // Prevent generic module resolution errors
+      fs: false,
+      module: false,
     };
 
     return config;
   },
 
-  // Suppress TypeScript build errors (use cautiously)
+  // Suppress TypeScript build errors
   typescript: {
     ignoreBuildErrors: true,
   },

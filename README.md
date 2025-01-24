@@ -4,6 +4,8 @@
 
 BARK AI is an **open-source**, full-stack application that brings together the power of LLM models and blockchain technology. Designed for the [Solana](https://solana.com/) ecosystem, BARK enables seamless interactions with DeFi protocols, NFTs, and much more.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/284b9031-0043-4200-84a7-f17afe79bf0c/deploy-status)](https://app.netlify.com/sites/bark-ai/deploys)
+
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)

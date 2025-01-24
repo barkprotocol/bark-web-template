@@ -1,7 +1,7 @@
 build:
   base: /
   publish: out
-  command: npm run build
+  command: NODE_NO_WARNINGS=1 next dev --turbopack
   environment:
     NEXT_PUBLIC_SUPABASE_URL:
     NEXT_PUBLIC_SUPABASE_ANON_KEY:
@@ -27,17 +27,14 @@ build:
     NEXT_PUBLIC_IMGBB_API_KEY:
     NFT_STORAGE_API_KEY:
 
-functions:
-  directory: netlify/functions
+deploy:
+  command: "npm run deploy"
+  environment:
+    NEXT_PUBLIC_SOLANA_NETWORK: devnet
+    NEXT_PUBLIC_SOLANA_RPC_URL: https://api.devnet.solana.com
+    PRIVY_API_KEY: your-privy-api-key
+    PRIVY_API_SECRET: your-privy-api-secret
+    PRIVY_SIGNING_KEY:
 
-redirects:
-  - from: "/*"
-    to: "/index.html"
-    status: 200
-
-headers:
-  - for: "/*"
-    values:
-      X-Frame-Options: DENY
-      X-XSS-Protection: "1; mode=block"
-      Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+plugins:
+  - "@netlify/plugin-nextjs"
