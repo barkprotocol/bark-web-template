@@ -3,6 +3,8 @@ build:
   publish: out
   command: npm run build
   environment:
+    NEXT_PUBLIC_SUPABASE_URL:
+    NEXT_PUBLIC_SUPABASE_ANON_KEY:
     NEXT_PUBLIC_SOLANA_NETWORK: mainnet-beta
     NEXT_PUBLIC_SOLANA_RPC_URL: https://api.mainnet-beta.solana.com
     NEXT_PUBLIC_HELIUS_RPC_URL: https://mainnet.helius-rpc.com
@@ -12,6 +14,7 @@ build:
     COINGECKO_API_URL: https://api.coingecko.com/api/v3
     COINMARKETCAP_API_KEY: your-coinmarketcap-api-key
     TELEGRAM_BOT_TOKEN: your-telegram-bot-token
+    TELEGRAM_BOT_USERNAME:
     DISCORD_BOT_TOKEN: your-discord-bot-token
     DISCORD_GUILD_ID:
     DISCORD_ROLE_ID:
