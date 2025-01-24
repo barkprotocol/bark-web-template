@@ -12,6 +12,8 @@ build:
     COINMARKETCAP_API_KEY: your-coinmarketcap-api-key
     TELEGRAM_BOT_TOKEN: your-telegram-bot-token
     DISCORD_BOT_TOKEN: your-discord-bot-token
+    PRIVY_API_KEY: your-privy-api-key
+    PRIVY_API_SECRET: your-privy-api-secret
 
 functions:
   directory: netlify/functions
