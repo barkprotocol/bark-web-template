@@ -5,6 +5,7 @@ build:
   environment:
     NEXT_PUBLIC_SOLANA_NETWORK: mainnet-beta
     NEXT_PUBLIC_SOLANA_RPC_URL: https://api.mainnet-beta.solana.com
+    NEXT_PUBLIC_HELIUS_RPC_URL: https://mainnet.helius-rpc.com
     HELIUS_API_KEY: your-helius-api-key
     OPENAI_API_KEY: your-openai-api-key
     ANTHROPIC_API_KEY: your-anthropic-api-key
@@ -12,8 +13,16 @@ build:
     COINMARKETCAP_API_KEY: your-coinmarketcap-api-key
     TELEGRAM_BOT_TOKEN: your-telegram-bot-token
     DISCORD_BOT_TOKEN: your-discord-bot-token
+    DISCORD_GUILD_ID:
+    DISCORD_ROLE_ID:
     PRIVY_API_KEY: your-privy-api-key
     PRIVY_API_SECRET: your-privy-api-secret
+    PRIVY_SIGNING_KEY:
+    NEXT_PUBLIC_JUPITER_API_URL: https://quote-api.jup.ag/v1/quote
+    NEXT_PUBLIC_EAP_RECEIVE_WALLET_ADDRESS: BARKkeAwhTuFzcLHX4DjotRsmjXQ1MshGrZbn1CUQqMo
+    WALLET_ENCRYPTION_KEY:
+    NEXT_PUBLIC_IMGBB_API_KEY:
+    NFT_STORAGE_API_KEY:
 
 functions:
   directory: netlify/functions
