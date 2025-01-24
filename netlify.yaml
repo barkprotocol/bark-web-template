@@ -1,0 +1,29 @@
+build:
+  base: /
+  publish: out
+  command: npm run build
+  environment:
+    NEXT_PUBLIC_SOLANA_NETWORK: mainnet-beta
+    NEXT_PUBLIC_SOLANA_RPC_URL: https://api.mainnet-beta.solana.com
+    HELIUS_API_KEY: your-helius-api-key
+    OPENAI_API_KEY: your-openai-api-key
+    ANTHROPIC_API_KEY: your-anthropic-api-key
+    COINGECKO_API_URL: https://api.coingecko.com/api/v3
+    COINMARKETCAP_API_KEY: your-coinmarketcap-api-key
+    TELEGRAM_BOT_TOKEN: your-telegram-bot-token
+    DISCORD_BOT_TOKEN: your-discord-bot-token
+
+functions:
+  directory: netlify/functions
+
+redirects:
+  - from: "/*"
+    to: "/index.html"
+    status: 200
+
+headers:
+  - for: "/*"
+    values:
+      X-Frame-Options: DENY
+      X-XSS-Protection: "1; mode=block"
+      Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
